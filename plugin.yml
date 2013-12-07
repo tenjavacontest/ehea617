@@ -1,0 +1,26 @@
+name: hpspells
+main: com.blogspot.coocoo617.Main
+version: 1.0
+commands:
+  aguamenti:
+    description: Produces a splash of water from the caster's wand.
+    usage: /aguamenti
+    permission: hpspells.aguamenti
+  avis:
+    description: Creates a flock of birds from the caster's wand.
+    usage: /avis
+    permission: hpspells.avis
+  confringo:
+    description: Causes anything that the spell meets to explode in flames.
+    usage: /confringo
+    permission: hpspells.confringo
+permissions:
+  hpspells.aguamenti:
+    description: Produces a splash of water from the caster's wand.
+    default: op
+  hpspells.avis:
+    description: Creates a flock of birds from the caster's wand.
+    default: op
+  hpspells.confringo:
+    description: Causes anything that the spell meets to explode in flames.
+    default: op
