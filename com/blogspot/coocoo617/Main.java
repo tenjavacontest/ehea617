@@ -1,13 +1,15 @@
 package com.blogspot.coocoo617;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Fireball;
 import org.bukkit.entity.Player;
-import org.bukkit.entity.Projectile;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 
 public class Main extends JavaPlugin
 {
@@ -68,6 +70,60 @@ public class Main extends JavaPlugin
 					if(player.hasPermission("hpspells.confringo"))
 					{
 						player.launchProjectile(Fireball.class);
+						return true;
+					} else {
+						return false;
+					}
+			}
+			if (cmd.getName().equalsIgnoreCase("confundo"))
+			{
+				Player player = (Player) sender;
+				Player target = Bukkit.getServer().getPlayer(args[0]);
+					if(player.hasPermission("hpspells.confundo"))
+					{
+						if (args.length > 1)
+						{
+					           sender.sendMessage(moreArgs);
+					           return false;
+					        } 
+					        if (args.length < 1)
+					        {
+					           sender.sendMessage(lessArgs);
+					           return false;
+					        }
+					        if (target == null)
+					        {
+					            sender.sendMessage(args[0] + " is not online!");
+					            return false;
+					         }
+			    		target.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 600, 1));
+						return true;
+					} else {
+						return false;
+					}
+			}
+			if (cmd.getName().equalsIgnoreCase("conjunctivitus"))
+			{
+				Player player = (Player) sender;
+				Player target = Bukkit.getServer().getPlayer(args[0]);
+					if(player.hasPermission("hpspells.conjunctivitus"))
+					{
+						if (args.length > 1)
+						{
+					           sender.sendMessage(moreArgs);
+					           return false;
+					        } 
+					        if (args.length < 1)
+					        {
+					           sender.sendMessage(lessArgs);
+					           return false;
+					        }
+					        if (target == null)
+					        {
+					            sender.sendMessage(args[0] + " is not online!");
+					            return false;
+					         }
+			    		target.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 600, 1));
 						return true;
 					} else {
 						return false;

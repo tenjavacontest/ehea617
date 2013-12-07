@@ -14,7 +14,22 @@ commands:
     description: Causes anything that the spell meets to explode in flames.
     usage: /confringo
     permission: hpspells.confringo
+  confundo:
+    description: Causes the victim to become confused.
+    usage: /confundo <player>
+    permission: hpspells.confundo
+  conjunctivitus:
+    description: A curse that causes great pain to the victim's eyes.
+    usage: /conjunctivitus <player>
+    permission: hpspells.conjunctivitus
 permissions:
+  hpspells.*:
+    description: Gives access to all doorman commands
+    children:
+      hpspells.aguamenti: true
+      hpspells.avis: true
+      hpspells.confringo: true
+      hpspells.confundo: true
   hpspells.aguamenti:
     description: Produces a splash of water from the caster's wand.
     default: op
@@ -23,4 +38,10 @@ permissions:
     default: op
   hpspells.confringo:
     description: Causes anything that the spell meets to explode in flames.
+    default: op
+  hpspells.confundo:
+    description: Causes the victim to become confused.
+    default: op
+  hpspells.conjunctivitus:
+    description: A curse that causes great pain to the victim's eyes..
     default: op
