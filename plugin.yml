@@ -22,10 +22,10 @@ commands:
     description: A curse that causes great pain to the victim's eyes.
     usage: /conjunctivitus <player>
     permission: hpspells.conjunctivitus
-  freezing:
-    description: Renders target immobile.
-    usage: /freezing <player>
-    permission: hpspells.freezing
+  locomotormortis:
+    description: Locks the legs together, preventing the victim from moving the legs in any fashion.
+    usage: /locomotormortis <player>
+    permission: hpspells.locomotormortis
 permissions:
   hpspells.*:
     description: Gives access to all doorman commands
@@ -51,6 +51,6 @@ permissions:
   hpspells.conjunctivitus:
     description: A curse that causes great pain to the victim's eyes..
     default: op
-  hpspells.freezing:
-    description: Renders target immobile.
+  hpspells.locomotormortis:
+    description: Locks the legs together, preventing the victim from moving the legs in any fashion.
     default: op

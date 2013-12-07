@@ -129,11 +129,11 @@ public class Main extends JavaPlugin
 						return false;
 					}
 			}
-			if (cmd.getName().equalsIgnoreCase("freezing"))
+			if (cmd.getName().equalsIgnoreCase("locomotormortis"))
 			{
 				Player player = (Player) sender;
 				Player target = Bukkit.getServer().getPlayer(args[0]);
-					if(player.hasPermission("hpspells.freezing"))
+					if(player.hasPermission("hpspells.locomotormortis"))
 					{
 						if (args.length > 1)
 						{
