@@ -22,6 +22,10 @@ commands:
     description: A curse that causes great pain to the victim's eyes.
     usage: /conjunctivitus <player>
     permission: hpspells.conjunctivitus
+  freezing:
+    description: Renders target immobile.
+    usage: /freezing <player>
+    permission: hpspells.freezing
 permissions:
   hpspells.*:
     description: Gives access to all doorman commands
@@ -30,6 +34,8 @@ permissions:
       hpspells.avis: true
       hpspells.confringo: true
       hpspells.confundo: true
+      hpspells.conjunctivitus: true
+      hpspells.freezing: true
   hpspells.aguamenti:
     description: Produces a splash of water from the caster's wand.
     default: op
@@ -44,4 +50,7 @@ permissions:
     default: op
   hpspells.conjunctivitus:
     description: A curse that causes great pain to the victim's eyes..
+    default: op
+  hpspells.freezing:
+    description: Renders target immobile.
     default: op

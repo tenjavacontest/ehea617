@@ -129,6 +129,33 @@ public class Main extends JavaPlugin
 						return false;
 					}
 			}
+			if (cmd.getName().equalsIgnoreCase("freezing"))
+			{
+				Player player = (Player) sender;
+				Player target = Bukkit.getServer().getPlayer(args[0]);
+					if(player.hasPermission("hpspells.freezing"))
+					{
+						if (args.length > 1)
+						{
+					           sender.sendMessage(moreArgs);
+					           return false;
+					        } 
+					        if (args.length < 1)
+					        {
+					           sender.sendMessage(lessArgs);
+					           return false;
+					        }
+					        if (target == null)
+					        {
+					            sender.sendMessage(args[0] + " is not online!");
+					            return false;
+					         }
+			    		target.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 600, 10));
+						return true;
+					} else {
+						return false;
+					}
+			}
 			return false;
 		}
 		sender.sendMessage(console);
